@@ -10,7 +10,7 @@
   <meta name="theme-color" content="#111111" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#1c1c1c" media="(prefers-color-scheme: dark)" />
   <meta property="og:title" content="DigCrate: Plan DJ sets that mix in key" />
-  <meta property="og:description" content="Analyze your library, plan sets with on-device AI, and export to Rekordbox. Audio analysis runs locally; planning options depend on your Mac and settings. Free on the Mac App Store." />
+  <meta property="og:description" content="DigCrate is a Mac app that reads the BPM, key, and energy of your local library and helps you build DJ sets that mix in key, then exports them to Rekordbox XML or M3U. Free download; Pro is a one-time purchase." />
   <meta property="og:url" content="https://digcrate.backspinlabs.com/" />
   <meta property="og:site_name" content="DigCrate" />
   <meta property="og:type" content="website" />
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="DigCrate: Plan DJ sets that mix in key" />
-  <meta name="twitter:description" content="Analyze your library, plan sets with on-device AI, and export to Rekordbox. Audio analysis runs locally; planning options depend on your Mac and settings." />
+  <meta name="twitter:description" content="DigCrate is a Mac app that reads the BPM, key, and energy of your local library and helps you build DJ sets that mix in key, then exports them to Rekordbox XML or M3U. Free download; Pro is a one-time purchase." />
   <meta name="twitter:image" content="https://digcrate.backspinlabs.com/og-image.png" />
   <link rel="icon" href="/app-icon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/app-icon.png" />
@@ -47,46 +47,45 @@
   <aside class="sheet" aria-labelledby="sheet-title">
     <h2 id="sheet-title">Before you download</h2>
     <h3>What you need</h3>
-    <p>A Mac with Apple Silicon and macOS 14 Sonoma or later. No DigCrate account is required.</p>
+    <p>A Mac with Apple Silicon and macOS 14 Sonoma or later. Planning with Apple’s on-device model needs macOS 26 and Apple Intelligence.</p>
     <h3>Price</h3>
     <p>Free to download. DigCrate Pro is $19.99 once in the US, with no subscription.</p>
-    <h3>What to know</h3>
-    <p>Audio analysis runs on your Mac. Planning with Apple’s on-device model has its own <a href="#requirements">requirements</a>.</p>
+    <h3>Privacy</h3>
+    <p>Audio analysis runs on your Mac. No DigCrate account is required.</p>
     <a class="btn" href="https://apps.apple.com/us/app/digcrate/id6779803539">Download on the Mac App Store</a>
   </aside>
 
   <main id="main">
     <h1>Plan DJ sets that mix in key.</h1>
     <p class="lede">DigCrate reads your local library for BPM, musical key, and energy, then helps you build sets with clean harmonic transitions and export playlists for your DJ software.</p>
-    <p>It is a Mac app, and the audio analysis runs on your Mac. You can plan with Apple’s on-device intelligence or with a model server you configure. No DigCrate account is required.</p>
 
     <section class="band" id="features" aria-label="What it does">
       <div>
         <h2>Analyze your library on your Mac</h2>
-        <p>Point DigCrate at a folder and it reads the BPM, the musical key in 8A-style harmonic notation, and the energy of every track. All of it happens on your Mac.</p>
+        <p>Point DigCrate at a folder and it reads the BPM, the musical key in 8A-style harmonic notation, and the energy of every track.</p>
         <p>Tracks with shaky analysis are flagged in a review queue. Fix a BPM or key by hand, confirm the rest, and keep your library clean.</p>
-        <p>Audition any track from a smart cue point that drops you near the part that matters, instead of the silence at the top. Filter by BPM, key, or energy, run a text search, and see the whole library at a glance, with counts, ranges, and most-common keys.</p>
+        <p>Audition any track from a smart cue point near the part that matters, not the silence at the top. Filter by BPM, key, or energy, search by text, and see counts, ranges, and most-common keys for the whole library.</p>
         <figure class="shot shot-wide">
           <img src="/images/library-window.jpg" width="990" height="704" alt="DigCrate’s Library screen, listing 36 analyzed tracks with BPM, key, energy, and confidence columns, plus filters and a review queue" />
-          <figcaption>Check the library’s BPM, key, and energy. Screenshot from the published Mac app.</figcaption>
+          <figcaption>The Library screen, from the published Mac app.</figcaption>
         </figure>
       </div>
       <div id="workflow">
         <h2>Describe the set, then review the plan</h2>
         <p>Describe the set in plain English, such as “60-minute liquid roller, mellow start, peak around minute 40,” and the planner picks and orders tracks from your library for flow.</p>
-        <p>Every handoff is scored on the harmonic wheel, with a plain-language note on why it works or why it clashes. Listen through the proposed transitions, and reorder tracks or fill a gap before you export. Harmonic scores are a planning aid; your ears make the final decision.</p>
+        <p>Every handoff is scored on the harmonic wheel, with a short note on why it works or clashes. Listen through the transitions, then reorder tracks or fill a gap before you export.</p>
         <figure class="shot shot-wide">
           <img src="/images/build-set-window.jpg" width="990" height="599" alt="DigCrate’s Build Set screen, with a set name, a 60-minute duration, and a prompt reading “60 minute party set. pop remixes and fun”" loading="lazy" />
-          <figcaption>Build a set from your library. Screenshot from the published Mac app.</figcaption>
+          <figcaption>The Build Set screen, from the published Mac app.</figcaption>
         </figure>
       </div>
       <div>
         <h2>Find the weak transitions and fill them</h2>
-        <p>Weak transitions are flagged with the BPM, key, and energy of the bridge track that would smooth them over. One click opens Beatport, Spotify, or SoundCloud searches built from the gap’s profile, so you know exactly what to hunt for. Those searches open in your browser.</p>
+        <p>Weak transitions are flagged with the BPM, key, and energy of a bridge track that would smooth them over. One click opens Beatport, Spotify, or SoundCloud searches for that profile in your browser.</p>
       </div>
       <div>
         <h2>Export to Rekordbox XML or M3U</h2>
-        <p>Export a finished set as Rekordbox XML or an M3U playlist with metadata intact, ready to review and import into compatible DJ software.</p>
+        <p>The set keeps its track metadata, so you can import it into Rekordbox or other DJ software that reads M3U.</p>
       </div>
     </section>
 
@@ -95,31 +94,30 @@
       <div class="cols">
         <div>
           <h3>Free</h3>
-          <p>$0, out of the box.</p>
-          <p>Library scanning and analysis, track previews, the review queue, and search and stats. You can scan, analyze, and preview your whole library at no cost.</p>
+          <p>Scan, analyze, and preview your whole library, with the review queue, search, and stats.</p>
         </div>
         <div>
           <h3>DigCrate Pro</h3>
           <p>$19.99 once on the US App Store. No subscription.</p>
-          <p>AI set planning, transition scoring, gap analysis, bridge-track discovery, and Rekordbox XML and M3U export.</p>
+          <p>Set planning, transition scoring, gap analysis, bridge-track discovery, and Rekordbox XML and M3U export.</p>
         </div>
       </div>
-      <p class="small">Pro is a one-time purchase through the Mac App Store, and you can buy it whenever you’re ready. Local App Store pricing may vary.</p>
+      <p class="small">Local App Store pricing may vary.</p>
     </section>
 
     <section class="section" id="requirements" aria-labelledby="requirements-title">
       <h2 id="requirements-title">What your Mac needs</h2>
       <p>DigCrate runs on Apple Silicon with macOS 14 or later. Apple’s on-device language-model planning requires macOS 26 or later with Apple Intelligence enabled and available. A model server you configure is another option; without an available language model, the planner can fall back to rules-based ordering.</p>
-      <p>Library analysis is local. A configured model server receives your planning prompt and selected track metadata, so use a server you trust. The current 1.x release does not include Apple Cloud planning. <a href="/privacy">Read the privacy details</a>.</p>
+      <p>A configured model server receives your planning prompt and selected track metadata, so use a server you trust. The current 1.x release does not include Apple Cloud planning. <a href="/privacy">Read the privacy details</a>.</p>
     </section>
 
     <section class="section" id="cli" aria-labelledby="cli-title">
-      <h2 id="cli-title">Command-line version</h2>
-      <p>If you prefer the terminal, the open-source <a href="https://github.com/fungiblemoose/digcrate">DigCrate CLI</a> is on GitHub.</p>
+      <h2 id="cli-title">Open-source CLI</h2>
+      <p>The <a href="https://github.com/fungiblemoose/digcrate">DigCrate CLI</a> on GitHub is a separate Python tool that scans, plans, and exports from the terminal. Its planner uses an OpenAI API key you supply.</p>
     </section>
 
     <section class="section" id="updates" aria-labelledby="signup-title">
-      <h2 id="signup-title">Occasional updates from Backspin Labs</h2>
+      <h2 id="signup-title">Email updates</h2>
       <div class="signup">
         <form id="dc-signup">
           <label for="dc-signup-email">Email address</label>
@@ -127,7 +125,7 @@
           <button class="btn" type="submit">Sign up</button>
         </form>
         <p id="dc-signup-msg" class="msg" role="status" aria-live="polite"></p>
-        <p class="small">Updates cover new Backspin Labs tools, with no spam. By subscribing you agree to receive occasional product updates. See our <a href="/privacy">privacy policy</a>.</p>
+        <p class="small">Occasional emails about new Backspin Labs tools. By subscribing you agree to receive them. See our <a href="/privacy">privacy policy</a>.</p>
       </div>
     </section>
 
@@ -136,13 +134,12 @@
   <footer class="foot">
     <p>DigCrate is made by <a href="https://backspinlabs.com">Backspin Labs</a>. Contact: <a href="mailto:hi@backspinlabs.com">hi@backspinlabs.com</a></p>
     <p><a href="https://apps.apple.com/us/app/digcrate/id6779803539">Mac App Store</a> · <a href="https://github.com/fungiblemoose/digcrate">GitHub</a> · <a href="/privacy">Privacy</a></p>
-    <p class="foot-note">Rekordbox is a trademark of AlphaTheta Corporation; Beatport, Spotify, and SoundCloud are trademarks of their respective owners. DigCrate is not affiliated with or endorsed by any of them. Discovery links open in your browser. Audio analysis stays local; model-server connections and browser searches are described in the privacy policy.</p>
+    <p class="foot-note">Rekordbox is a trademark of AlphaTheta Corporation; Beatport, Spotify, and SoundCloud are trademarks of their respective owners. DigCrate is not affiliated with or endorsed by any of them.</p>
   </footer>
 
 </div>
 <script>
-// Shared email-capture endpoint. Placeholder — the Belay waitlist worker PR
-// defines the real URL; update CAPTURE_ENDPOINT once that worker is deployed.
+// Shared Backspin Labs email-capture endpoint (served by the Belay waitlist worker).
 const CAPTURE_ENDPOINT = "https://belay.backspinlabs.com/api/waitlist";
 (function () {
   var form = document.getElementById("dc-signup");
@@ -175,10 +172,10 @@ const CAPTURE_ENDPOINT = "https://belay.backspinlabs.com/api/waitlist";
       return res.json();
     }).then(function (data) {
       if (!data || data.ok !== true) throw new Error("Unexpected response");
-      msg.textContent = "Thanks — you're on the list.";
+      msg.textContent = "Thanks, you’re on the list.";
       form.reset();
     }).catch(function () {
-      msg.textContent = "Sign-up failed — please try again later, or email hi@backspinlabs.com.";
+      msg.textContent = "Sign-up failed. Try again later, or email hi@backspinlabs.com.";
     }).finally(function () {
       clearTimeout(timer);
       button.disabled = false;
