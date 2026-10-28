@@ -19,8 +19,16 @@
   --sheet: #f1f1f1;
   --orange: #ff5a1f;           /* fills and bands only: too light to be text on white */
   --on-orange: #111111;
-  --c: var(--orange);          /* a product sets --c and --on to its own color */
+  --c: var(--orange);          /* a product sets --c and --on with its class, below */
   --on: var(--on-orange);
+  /* Each product's color, and the text that sits on it. Lighter in dark mode where needed. */
+  --c-orderpick: #2747d8; --on-orderpick: #ffffff;
+  --c-belay: #15233b;     --on-belay: #ffffff;
+  --c-heatcheck: #a3171c; --on-heatcheck: #ffffff;
+  --c-thehunt: #18507f;   --on-thehunt: #ffffff;
+  --c-golflog: #1a7d44;   --on-golflog: #ffffff;
+  --c-compel: #1f5c45;    --on-compel: #ffffff;
+  --icon-plate: #e9e9e9;       /* behind an app icon drawn for a light background */
   --font-display: "Big Shoulders Display", "BSD Fallback 1", "BSD Fallback 2", "BSD Fallback 3", sans-serif;
   --font-text: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
@@ -33,13 +41,27 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --page: #0f0f0f; --ink: #f2f2f2; --ink-2: #c9c9c9; --ink-3: #9a9a9a; --hair: #333333; --sheet: #1c1c1c;
+    --c-orderpick: #5f7dff; --on-orderpick: #111111; --c-belay: #4a6fb5; --c-heatcheck: #e0524f; --on-heatcheck: #111111;
+    --c-thehunt: #36a1e3; --on-thehunt: #111111; --c-golflog: #22c55e; --on-golflog: #111111; --c-compel: #3f9a76; --on-compel: #111111;
   }
 }
 :root[data-theme="dark"] {
   --page: #0f0f0f; --ink: #f2f2f2; --ink-2: #c9c9c9; --ink-3: #9a9a9a; --hair: #333333; --sheet: #1c1c1c;
+  --c-orderpick: #5f7dff; --on-orderpick: #111111; --c-belay: #4a6fb5; --c-heatcheck: #e0524f; --on-heatcheck: #111111;
+  --c-thehunt: #36a1e3; --on-thehunt: #111111; --c-golflog: #22c55e; --on-golflog: #111111; --c-compel: #3f9a76; --on-compel: #111111;
   color-scheme: dark;
 }
 :root[data-theme="light"] { color-scheme: light; }
+
+/* A page or a row takes its product's color by class: <body class="orderpick">. */
+.tally { --c: var(--orange); --on: var(--on-orange); }
+.orderpick { --c: var(--c-orderpick); --on: var(--on-orderpick); }
+.belay { --c: var(--c-belay); --on: var(--on-belay); }
+.heatcheck { --c: var(--c-heatcheck); --on: var(--on-heatcheck); }
+.thehunt { --c: var(--c-thehunt); --on: var(--on-thehunt); }
+.golflog { --c: var(--c-golflog); --on: var(--on-golflog); }
+.compel { --c: var(--c-compel); --on: var(--on-compel); }
+.digcrate { --c: var(--ink); --on: var(--page); }
 
 /* ---------- Base ---------- */
 
@@ -57,7 +79,7 @@ body {
 /* The condensed face is for the studio name, product names, and the one headline on a page.
    Everything else is the text face. */
 h1 { margin: 0 0 16px; font: 800 clamp(40px, 4.6vw, 60px)/.98 var(--font-display); max-width: 19ch; text-wrap: balance; }
-h2 { margin: 0 0 12px; font: 600 clamp(22px, 2.2vw, 28px)/1.22 var(--font-text); letter-spacing: -.01em; max-width: 30ch; }
+h2 { margin: 0 0 12px; font: 600 clamp(22px, 2.2vw, 28px)/1.22 var(--font-text); letter-spacing: -.01em; max-width: 40ch; }
 h3 { margin: 0 0 6px; font: 600 17px/1.3 var(--font-text); }
 
 p { margin: 0 0 14px; max-width: 60ch; color: var(--ink-2); }
@@ -73,6 +95,8 @@ code, kbd { font-family: var(--font-mono); font-size: .9em; }
 ::selection { background: var(--orange); color: var(--on-orange); }
 :focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
 
+.skip { position: absolute; left: 16px; top: -100px; z-index: 10; padding: 8px 12px; background: var(--page); color: var(--ink); }
+.skip:focus { top: 8px; }
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
@@ -118,18 +142,20 @@ code, kbd { font-family: var(--font-mono); font-size: .9em; }
 
 .head { background: var(--c); color: var(--on); }
 .head-in { max-width: 1160px; margin: 0 auto; padding: 14px var(--gutter); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; }
-.brand { display: flex; align-items: center; gap: .18em; font: 800 clamp(48px, 7vw, 88px)/.9 var(--font-display); text-decoration: none; }
+.brand { display: flex; align-items: center; gap: .18em; font: 800 clamp(40px, 4.5vw, 56px)/.9 var(--font-display); text-decoration: none; }
 .brand img, .brand svg { height: .74em; width: auto; }
-.head nav { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 15px; font-weight: 500; }
+.brand img { border-radius: 22.5%; }   /* an app icon, masked the way iOS does */
+.head nav { display: flex; flex-wrap: wrap; gap: 0 20px; font-size: 15px; font-weight: 500; }
+.head nav a { padding: 10px 0; }
 .head .by { font-size: 15px; font-weight: 500; }
 
 /* ---------- Buttons ---------- */
 
 .btn {
   display: inline-block; padding: 14px 20px; border: 0; background: var(--ink); color: var(--page);
-  font: 600 17px/1.1 var(--font-text); text-align: center; text-decoration: none; cursor: pointer;
+  font: 600 17px/1.1 var(--font-text); text-align: center; text-decoration: none; text-wrap: balance; cursor: pointer;
 }
-.btn:hover { background: var(--orange); color: var(--on-orange); }
+.btn:hover { background: var(--c); color: var(--on); }
 .btn[disabled] { opacity: .55; cursor: not-allowed; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 18px; }
 
@@ -174,8 +200,8 @@ code, kbd { font-family: var(--font-mono); font-size: .9em; }
 .shelf { padding: 26px 0 10px; border-top: 3px solid var(--ink); }
 .shelf > h2 { margin-bottom: 14px; }
 .item { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 4px 18px; align-items: start; padding: 12px 0 12px 20px; border-left: 12px solid var(--c); margin-bottom: 10px; }
-.item img, .item .noicon { grid-row: span 3; width: 52px; height: 52px; border-radius: 12px; }
-.item img.on-light { background: #e9e9e9; }
+.item img, .item .noicon { grid-row: span 3; width: 52px; height: 52px; border-radius: 22.5%; }
+.item img.on-light { background: var(--icon-plate); }
 .item b { font: 800 30px/1 var(--font-display); }
 .item b a { text-decoration: none; }
 .item b a:hover { text-decoration: underline; text-decoration-thickness: 3px; }
@@ -219,7 +245,7 @@ input[type="text"], input[type="email"], select, textarea {
 
 /* ---------- Footer ---------- */
 
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; max-width: none; padding-top: 24px; border-top: 3px solid var(--ink); font-size: 14px; color: var(--ink-3); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; max-width: none; padding-top: 24px; border-top: 3px solid var(--ink); font-size: 15px; color: var(--ink-3); }
 .foot p { max-width: none; margin: 0; color: inherit; }
 .foot-note { flex-basis: 100%; }
 
