@@ -12,7 +12,7 @@
 .digcrate .btn:hover { background: var(--ink-2); color: var(--page); }
 
 /* The icon is black on transparent, so it sits on the light icon plate. */
-.brand img, .topline img { border-radius: 22.5%; background: var(--icon-plate); }
+.brand img, .topline img { background: var(--icon-plate); }
 
 /* Mac screenshots are landscape, so they run the width of the band under the text. */
 .shot-wide { max-width: 860px; margin-top: 20px; }
@@ -21,12 +21,6 @@
 .signup label { flex-basis: 100%; font-weight: 600; font-size: 15px; }
 .cols + .small { margin-top: 16px; }
 
-/* The footer runs under both columns. On a phone it stays last, after the reordered page. */
-.frame > .foot { grid-column: 1 / -1; order: 4; }
-@media (max-width: 899px) { .frame > .foot { margin-top: 28px; } }
-
-/* Legal pages */
-.topline { max-width: none; margin: 0 0 32px; padding-bottom: 14px; border-bottom: 3px solid var(--ink); }
-.topline a { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 600; text-decoration: none; }
-.topline a:hover { text-decoration: underline; }
-.prose .foot { margin-top: 56px; }
+/* The footer sits at the end of main, as on the other product pages, so the sticky sheet in the
+   left column never slides over it. */
+main > .foot { margin-top: 28px; }
