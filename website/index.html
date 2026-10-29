@@ -113,7 +113,7 @@
 
     <section class="section" id="cli" aria-labelledby="cli-title">
       <h2 id="cli-title">Open-source CLI</h2>
-      <p>The <a href="https://github.com/fungiblemoose/digcrate">DigCrate CLI</a> on GitHub is a separate Python tool that scans, plans, and exports from the terminal. Its planner uses an OpenAI API key you supply.</p>
+      <p>The <a href="https://github.com/backspinlabs/digcrate">DigCrate CLI</a> on GitHub is a separate Python tool that scans, plans, and exports from the terminal. Its planner uses an OpenAI API key you supply.</p>
     </section>
 
     <section class="section" id="updates" aria-labelledby="signup-title">
@@ -133,7 +133,7 @@
 
   <footer class="foot">
     <p>DigCrate is made by <a href="https://backspinlabs.com">Backspin Labs</a>. Contact: <a href="mailto:hi@backspinlabs.com">hi@backspinlabs.com</a></p>
-    <p><a href="https://apps.apple.com/us/app/digcrate/id6779803539">Mac App Store</a> · <a href="https://github.com/fungiblemoose/digcrate">GitHub</a> · <a href="/privacy">Privacy</a></p>
+    <p><a href="https://apps.apple.com/us/app/digcrate/id6779803539">Mac App Store</a> · <a href="https://github.com/backspinlabs/digcrate">GitHub</a> · <a href="/privacy">Privacy</a></p>
     <p class="foot-note">Rekordbox is a trademark of AlphaTheta Corporation; Beatport, Spotify, and SoundCloud are trademarks of their respective owners. DigCrate is not affiliated with or endorsed by any of them.</p>
   </footer>
 
@@ -175,7 +175,7 @@ const CAPTURE_ENDPOINT = "https://belay.backspinlabs.com/api/waitlist";
       msg.textContent = "Thanks, you’re on the list.";
       form.reset();
     }).catch(function () {
-      msg.textContent = "Sign-up failed. Try again later, or email hi@backspinlabs.com.";
+      msg.textContent = "Sign-up failed. Try again later, or email support@backspinlabs.com.";
     }).finally(function () {
       clearTimeout(timer);
       button.disabled = false;

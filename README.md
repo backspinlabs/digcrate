@@ -32,7 +32,7 @@ finds the weak spots, and exports playlists you can actually play out.
 ## Install
 
 ```bash
-git clone https://github.com/fungiblemoose/digcrate.git
+git clone https://github.com/backspinlabs/digcrate.git
 cd digcrate
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e .
