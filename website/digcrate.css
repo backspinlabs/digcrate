@@ -21,6 +21,6 @@
 .signup label { flex-basis: 100%; font-weight: 600; font-size: 15px; }
 .cols + .small { margin-top: 16px; }
 
-/* The footer runs under both columns. On a phone it stays last, after the reordered page. */
-.frame > .foot { grid-column: 1 / -1; order: 4; }
-@media (max-width: 899px) { .frame > .foot { margin-top: 28px; } }
+/* The footer sits at the end of main, as on the other product pages, so the sticky sheet in the
+   left column never slides over it. */
+main > .foot { margin-top: 28px; }
