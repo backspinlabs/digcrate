@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rekordbox playlists in key order: sort by key or import a set | DigCrate</title>
+  <meta name="description" content="How to sort a Rekordbox playlist by key and keep that order, find compatible keys while you play, and import a key-ordered set planned on your Mac as Rekordbox XML." />
+  <link rel="canonical" href="https://digcrate.backspinlabs.com/rekordbox-playlists-by-key" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="Rekordbox playlists in key order: sort by key or import a set" />
+  <meta property="og:description" content="How to sort a Rekordbox playlist by key and keep that order, find compatible keys while you play, and import a key-ordered set planned on your Mac as Rekordbox XML." />
+  <meta property="og:url" content="https://digcrate.backspinlabs.com/rekordbox-playlists-by-key" />
+  <meta property="og:site_name" content="DigCrate" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://digcrate.backspinlabs.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rekordbox playlists in key order: sort by key or import a set" />
+  <meta name="twitter:description" content="How to sort a Rekordbox playlist by key and keep that order, find compatible keys while you play, and import a key-ordered set planned on your Mac as Rekordbox XML." />
+  <meta name="twitter:image" content="https://digcrate.backspinlabs.com/og-image.png" />
+  <link rel="icon" href="/app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/app-icon.png" />
+  <link rel="preload" href="/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/backspin.css" />
+  <link rel="stylesheet" href="/digcrate.css" />
+</head>
+<body class="digcrate">
+<div class="prose">
+<header class="topline"><a href="/"><img src="/app-icon.png" alt="" width="28" height="28" />DigCrate</a></header>
+
+<main>
+<h1>Rekordbox playlists in key order</h1>
+<p class="lede">You can put a Rekordbox playlist in key order two ways: sort it inside Rekordbox, or plan the running order first and import it as a Rekordbox XML playlist.</p>
+<p class="small">Menu names below follow the Rekordbox 7 manual, version 7.2.18. Other versions may label them differently.</p>
+
+<h2>Show keys as codes</h2>
+<p>Open Preferences &gt; View &gt; Display Type and set Key display format to Alphanumeric. Keys then show as codes like 1A and 2A instead of names like Abm and B. Codes make it quick to spot the moves that mix cleanly; the <a href="/camelot-wheel">Camelot wheel guide</a> explains them.</p>
+
+<h2>Sort a playlist by key</h2>
+<ol class="steps">
+  <li><strong>Open the playlist.</strong> Show the Key column if it’s hidden.</li>
+  <li><strong>Click the Key column heading.</strong> Click it again to switch between ascending and descending order.</li>
+  <li><strong>Keep the order.</strong> With the playlist still sorted by key, choose Renumber Track Order from the Playlist menu. Rekordbox renumbers the tracks in the order they’re sorted.</li>
+  <li><strong>Adjust by hand.</strong> Sort by the track number column again, then drag tracks to fine-tune the order.</li>
+</ol>
+
+<h2>What a key sort doesn’t do</h2>
+<p>A key sort groups tracks that share a key. It doesn’t check that the last track in one group mixes with the first track in the next, and it ignores tempo and energy. Treat a sorted playlist as a crate to pick from, not a running order.</p>
+
+<h2>Find compatible keys while you play</h2>
+<ul>
+  <li><strong>Traffic Light.</strong> With the Key column showing, Rekordbox highlights the keys of tracks that are compatible with the track on the selected deck. Set the range of keys it highlights in Preferences &gt; View &gt; Display Type.</li>
+  <li><strong>Track filter.</strong> Filter the track list by KEY, and turn on Master Player or Master Deck to use the key of the track that’s playing.</li>
+  <li><strong>Related Tracks.</strong> List tracks related to the loaded one by BPM, key, genre, rating, My Tag, and more.</li>
+</ul>
+
+<h2>Plan the order first, then import it</h2>
+<p>For a set where every handoff is checked before the gig, plan the order outside Rekordbox and bring it in as one playlist. With DigCrate on a Mac:</p>
+<ol class="steps">
+  <li><strong>Scan your music folder.</strong> DigCrate reads the BPM, key, and energy of every track. Tracks with shaky analysis go to a review queue, where you fix a BPM or key by hand.</li>
+  <li><strong>Build the set.</strong> Describe it in plain English and the planner picks and orders tracks from your library. Every handoff is scored on the harmonic wheel, with a short note on why it works or clashes. Reorder tracks or fill a flagged gap until the order is right.</li>
+  <li><strong>Export Rekordbox XML.</strong> DigCrate writes the set as a Rekordbox XML playlist in set order, with its track metadata.</li>
+  <li><strong>Point Rekordbox at the file.</strong> Open Preferences &gt; Advanced &gt; Database and set Imported Library under rekordbox xml to the exported file.</li>
+  <li><strong>Show the XML library.</strong> If rekordbox xml isn’t in the tree view, open Preferences &gt; View &gt; Layout and check rekordbox xml under Media Browser.</li>
+  <li><strong>Import the playlist.</strong> In the tree view, double-click rekordbox xml, then Playlists. Drag your set under Playlists. Import Playlist in the Playlist menu does the same for a selected playlist.</li>
+</ol>
+<p>If you export the set again later, use the update button on the rekordbox xml library to load the latest version.</p>
+<p>DigCrate also exports M3U playlists for other DJ software that reads M3U. Set planning, transition scoring, and export are part of DigCrate Pro, $19.99 once on the US App Store with no subscription; scanning, analysis, and preview are free. DigCrate needs a Mac with Apple Silicon and macOS 14 or later.</p>
+<p><a class="btn" href="https://apps.apple.com/us/app/digcrate/id6779803539">Download on the Mac App Store</a></p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://rekordbox.com/en/download/#manual">Rekordbox 7 manual</a>, version 7.2.18, AlphaTheta</li>
+  <li><a href="https://rekordbox.com/en/support/faq/operation-hint/">Rekordbox FAQ: key display format</a>, AlphaTheta</li>
+</ul>
+</main>
+
+<footer class="foot">
+  <p>© 2026 Backspin Labs, LLC. Allen, Texas.</p>
+  <p><a href="/">DigCrate</a> · <a href="https://apps.apple.com/us/app/digcrate/id6779803539">Mac App Store</a> · <a href="/privacy">Privacy</a></p>
+  <p class="foot-note">More guides: <a href="/harmonic-mixing-mac">Harmonic mixing on a Mac</a> · <a href="/camelot-wheel">The Camelot wheel explained</a></p>
+  <p class="foot-note">DigCrate is made by <a href="https://backspinlabs.com">Backspin Labs</a>. Contact: <a href="mailto:hi@backspinlabs.com">hi@backspinlabs.com</a></p>
+  <p class="foot-note">Camelot is a trademark of Mixed In Key LLC. Rekordbox is a trademark of AlphaTheta Corporation. DigCrate is not affiliated with or endorsed by either.</p>
+</footer>
+</div>
+</body>
+</html>

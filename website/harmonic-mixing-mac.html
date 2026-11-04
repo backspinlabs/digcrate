@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmonic mixing on a Mac: how to mix DJ sets in key | DigCrate</title>
+  <meta name="description" content="What harmonic mixing is, which key changes blend cleanly, and how to plan a DJ set in key on a Mac, from key detection to a playlist your DJ software can load." />
+  <link rel="canonical" href="https://digcrate.backspinlabs.com/harmonic-mixing-mac" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0f0f0f" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="Harmonic mixing on a Mac: how to mix DJ sets in key" />
+  <meta property="og:description" content="What harmonic mixing is, which key changes blend cleanly, and how to plan a DJ set in key on a Mac, from key detection to a playlist your DJ software can load." />
+  <meta property="og:url" content="https://digcrate.backspinlabs.com/harmonic-mixing-mac" />
+  <meta property="og:site_name" content="DigCrate" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://digcrate.backspinlabs.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harmonic mixing on a Mac: how to mix DJ sets in key" />
+  <meta name="twitter:description" content="What harmonic mixing is, which key changes blend cleanly, and how to plan a DJ set in key on a Mac, from key detection to a playlist your DJ software can load." />
+  <meta name="twitter:image" content="https://digcrate.backspinlabs.com/og-image.png" />
+  <link rel="icon" href="/app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/app-icon.png" />
+  <link rel="preload" href="/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/backspin.css" />
+  <link rel="stylesheet" href="/digcrate.css" />
+</head>
+<body class="digcrate">
+<div class="prose">
+<header class="topline"><a href="/"><img src="/app-icon.png" alt="" width="28" height="28" />DigCrate</a></header>
+
+<main>
+<h1>Harmonic mixing on a Mac</h1>
+<p class="lede">Harmonic mixing means playing tracks back to back in keys that sound right together, so the overlap in a blend doesn’t clash. This page covers how it works and how to do it on a Mac with the DJ software you already use.</p>
+
+<h2>Why key matters in a blend</h2>
+<p>During a blend, two tracks play at once, so two keys play at once. Keys that share most of their notes sit well together. Keys that share few notes fight, and you hear it most in basslines, pads, and vocals.</p>
+<p>Two relationships give you the most shared notes. Keys a fifth apart differ by only one sharp or flat, and a major key and its relative minor share the same key signature (A minor and C major, for example). Both are laid out on the <a href="https://en.wikipedia.org/wiki/Circle_of_fifths">circle of fifths</a>.</p>
+
+<h2>The moves that mix cleanly</h2>
+<p>A common DJ shorthand writes each key as a number from 1 to 12 plus a letter, with A for minor and B for major. In that system, known as the <a href="/camelot-wheel">Camelot wheel</a>, the clean moves from a track in 8A (A minor) are:</p>
+<ul>
+  <li>The same code: 8A to 8A.</li>
+  <li>One number up or down, same letter: 8A to 9A (E minor) or 7A (D minor).</li>
+  <li>The same number, other letter: 8A to 8B (C major), its relative major.</li>
+</ul>
+<p>The numbers wrap around, so 12A and 1A are neighbors. Mixed In Key’s guide also lists deliberate jumps, such as adding two to the number (8A to 10A), which it calls an energy boost. It is clear that a matching key only shortlists tracks: “Phrasing, tempo, vocals and basslines still decide whether the blend works.”</p>
+
+<h2>Watch the key when you change tempo</h2>
+<p>Speeding a track up without key lock raises its pitch, and its key with it. About 6 percent faster is one semitone higher, which is seven steps around the wheel. Turn on key lock (Master Tempo in Rekordbox) when you pitch tracks to match, or account for the shift. The Rekordbox manual notes that with Master Tempo off, the key shown on the deck changes when the tempo changes.</p>
+
+<h2>How to do it on a Mac</h2>
+<ol class="steps">
+  <li><strong>Get a key for every track.</strong> Rekordbox analyzes BPM and key as part of track analysis, and DigCrate does too (below). Key detection makes mistakes, so check any track that sounds off by ear.</li>
+  <li><strong>Show keys as codes.</strong> In Rekordbox, open Preferences &gt; View &gt; Display Type and set Key display format to Alphanumeric to see codes like 1A and 2A instead of key names.</li>
+  <li><strong>Build the order before the gig.</strong> Pick each next track from the clean moves above, then check the tempo jump and the energy. Rekordbox can also highlight compatible keys as you play; the <a href="/rekordbox-playlists-by-key">Rekordbox key-order guide</a> covers that and key sorting.</li>
+  <li><strong>Listen through every transition.</strong> A compatible key is a starting point. Two tracks in the same key can still clash in their vocals or basslines.</li>
+</ol>
+
+<h2>Where DigCrate fits</h2>
+<p>DigCrate is a Mac app for the planning part. Point it at a folder of local files and it reads the BPM, the key in 8A-style codes, and the energy of every track. Tracks with shaky analysis go to a review queue, where you fix a BPM or key by hand.</p>
+<p>Describe the set in plain English and the planner picks and orders tracks from your library. Every handoff is scored on the harmonic wheel, with a short note on why it works or clashes. Weak transitions are flagged with the BPM, key, and energy of a bridge track that would smooth them over. When the order is right, export it as Rekordbox XML or an M3U playlist.</p>
+<p>Scanning, analysis, and preview are free. Set planning, transition scoring, gap analysis, and export are part of DigCrate Pro, $19.99 once on the US App Store with no subscription. DigCrate needs a Mac with Apple Silicon and macOS 14 or later.</p>
+<p><a class="btn" href="https://apps.apple.com/us/app/digcrate/id6779803539">Download on the Mac App Store</a></p>
+
+<h2>Sources</h2>
+<ul>
+  <li><a href="https://mixedinkey.com/camelot-wheel/">Camelot Wheel</a>, Mixed In Key</li>
+  <li><a href="https://en.wikipedia.org/wiki/Circle_of_fifths">Circle of fifths</a>, Wikipedia</li>
+  <li><a href="https://rekordbox.com/en/download/#manual">Rekordbox 7 manual</a>, version 7.2.18, AlphaTheta</li>
+</ul>
+</main>
+
+<footer class="foot">
+  <p>© 2026 Backspin Labs, LLC. Allen, Texas.</p>
+  <p><a href="/">DigCrate</a> · <a href="https://apps.apple.com/us/app/digcrate/id6779803539">Mac App Store</a> · <a href="/privacy">Privacy</a></p>
+  <p class="foot-note">More guides: <a href="/camelot-wheel">The Camelot wheel explained</a> · <a href="/rekordbox-playlists-by-key">Rekordbox playlists in key order</a></p>
+  <p class="foot-note">DigCrate is made by <a href="https://backspinlabs.com">Backspin Labs</a>. Contact: <a href="mailto:hi@backspinlabs.com">hi@backspinlabs.com</a></p>
+  <p class="foot-note">Camelot is a trademark of Mixed In Key LLC. Rekordbox is a trademark of AlphaTheta Corporation. DigCrate is not affiliated with or endorsed by either.</p>
+</footer>
+</div>
+</body>
+</html>

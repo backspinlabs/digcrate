@@ -24,3 +24,16 @@
 /* The footer sits at the end of main, as on the other product pages, so the sticky sheet in the
    left column never slides over it. */
 main > .foot { margin-top: 28px; }
+
+/* The key wheel on the Camelot page: an inline SVG drawn in ink, so it follows the theme.
+   The key being mixed from is filled ink; the keys that mix with it are filled grey. */
+.wheel { max-width: 440px; margin: 20px 0 24px; }
+.wheel svg { display: block; width: 100%; height: auto; font-family: var(--font-text); }
+.wheel path { fill: var(--page); stroke: var(--ink); stroke-width: 1.5; }
+.wheel text { fill: var(--ink); font-size: 12px; text-anchor: middle; }
+.wheel text.code { font-size: 14px; font-weight: 600; }
+.wheel .on path { fill: var(--ink); }
+.wheel .near path { fill: var(--ink-3); }
+.wheel .on text, .wheel .near text { fill: var(--page); }
+.wheel figcaption { margin-top: 8px; font-size: 15px; color: var(--ink-3); }
+.prose .table-scroll { margin: 16px 0 20px; }
