@@ -61,7 +61,8 @@
     <section class="band" id="features" aria-label="What it does">
       <div>
         <h2>Analyze your library on your Mac</h2>
-        <p>Point DigCrate at a folder and it reads the BPM, the musical key in <a href="/camelot-wheel">8A-style harmonic notation</a>, and the energy of every track.</p>
+        <p>Point DigCrate at a folder and it reads the BPM, the musical key in <a href="/camelot-wheel">8A-style harmonic notation</a>, and the energy of every track. On macOS 27 it also uses Apple’s music analysis to find each track’s sections and phrases.</p>
+        <p>If your files already have keys and BPM in their tags, from Mixed In Key or anything else, DigCrate uses those.</p>
         <p>Tracks with shaky analysis are flagged in a review queue. Fix a BPM or key by hand, confirm the rest, and keep your library clean.</p>
         <p>Audition any track from a smart cue point near the part that matters, not the silence at the top. Filter by BPM, key, or energy, search by text, and see counts, ranges, and most-common keys for the whole library.</p>
         <figure class="shot shot-wide">
@@ -107,7 +108,7 @@
     <section class="section" id="requirements" aria-labelledby="requirements-title">
       <h2 id="requirements-title">What your Mac needs</h2>
       <p>DigCrate runs on Apple Silicon with macOS 14 or later. Apple’s on-device language-model planning requires macOS 26 or later with Apple Intelligence enabled and available. A model server you configure is another option; without an available language model, the planner can fall back to rules-based ordering.</p>
-      <p>A configured model server receives your planning prompt and selected track metadata, so use a server you trust. The current 1.x release does not include Apple Cloud planning. <a href="/privacy">Read the privacy details</a>.</p>
+      <p>A configured model server receives your planning prompt and selected track metadata, so use a server you trust. DigCrate does not include Apple Cloud planning. <a href="/privacy">Read the privacy details</a>.</p>
     </section>
 
     <section class="section" id="cli" aria-labelledby="cli-title">
