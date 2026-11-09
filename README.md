@@ -5,9 +5,10 @@ your local music library (BPM, musical key, energy), plans sets from natural
 language descriptions, scores every transition using harmonic mixing rules,
 finds the weak spots, and exports playlists you can actually play out.
 
-> **Looking for the Mac app?** DigCrate for macOS is now available —
-> [Download on the Mac App Store](https://apps.apple.com/us/app/digcrate/id6779803539?mt=12).
-> Learn more at [digcrate.backspinlabs.com](https://digcrate.backspinlabs.com).
+> **Looking for the Mac app?** DigCrate for Mac is a free download on the
+> [Mac App Store](https://apps.apple.com/us/app/digcrate/id6779803539?mt=12), with
+> set planning and export in a one-time Pro upgrade. No Python setup or API key needed.
+> Details and DJ guides at [digcrate.backspinlabs.com](https://digcrate.backspinlabs.com).
 
 ## What it does
 
